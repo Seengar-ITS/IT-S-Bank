@@ -40,7 +40,7 @@ export default function Dashboard() {
         <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.6)', marginBottom: 8 }}>IT-S Bank · {account?.account_type?.toUpperCase()} ACCOUNT</div>
         <div style={{ fontSize: 13, color: 'rgba(255,255,255,0.5)', marginBottom: 20, fontFamily: 'monospace', letterSpacing: 2 }}>{account?.account_number}</div>
         <div style={{ fontSize: 12, color: 'rgba(255,255,255,0.5)', marginBottom: 4 }}>Available Balance</div>
-        <div style={{ fontSize: 48, fontWeight: 800, color: '#22d3ee', marginBottom: 4 }}>{Number(account?.balance_its || 0).toLocaleString()} <span style={{ fontSize: 20, color: 'rgba(255,255,255,0.5)' }}>ITS</div>
+        <div style={{ fontSize: 48, fontWeight: 800, color: '#22d3ee', marginBottom: 4 }}>{Number(account?.balance_its || 0).toLocaleString()} <span style={{ fontSize: 20, color: 'rgba(255,255,255,0.5)' }}>ITS</span></div>
         <div style={{ fontSize: 14, color: 'rgba(255,255,255,0.4)' }}>≈ PKR {Number(account?.balance_its || 0).toLocaleString()}</div>
       </div>
 
