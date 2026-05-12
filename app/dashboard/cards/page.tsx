@@ -36,7 +36,7 @@ export default function CardsPage() {
             <div style={{ position: 'absolute', bottom: -30, left: 100, width: 180, height: 180, borderRadius: '50%', background: 'rgba(34,211,238,0.08)' }} />
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start', marginBottom: 40 }}>
               <div style={{ fontWeight: 800, fontSize: 16, color: '#22d3ee' }}>IT-S Bank</div>
-              <div style={{ fontSize: 11, color: 'rgba(255,255,255,0.5)', background: card.status === 'active' ? 'rgba(34,197,94,0.2)' : 'rgba(239,68,68,0.2)', padding: '4px 10px', borderRadius: 8, fontWeight: 700, color: card.status === 'active' ? '#22c55e' : '#ef4444' }}>{card.status.toUpperCase()}</div>
+              <div style={{ fontSize: 11, background: card.status === 'active' ? 'rgba(34,197,94,0.2)' : 'rgba(239,68,68,0.2)', padding: '4px 10px', borderRadius: 8, fontWeight: 700, color: card.status === 'active' ? '#22c55e' : '#ef4444' }}>{card.status.toUpperCase()}</div>
             </div>
             <div style={{ fontFamily: 'monospace', fontSize: 20, letterSpacing: 3, marginBottom: 24, color: 'rgba(255,255,255,0.9)', fontWeight: 600 }}>{card.card_number}</div>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end' }}>
