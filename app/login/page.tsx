@@ -1,3 +1,4 @@
+// IT-S OAuth Component — injected
 'use client'
 import { useState } from 'react'
 
@@ -24,7 +25,15 @@ export default function LoginPage() {
           <p style={{ color: 'rgba(255,255,255,0.5)', fontSize: 14 }}>Enter your email, password, and PIN</p>
         </div>
 
-        <form onSubmit={handleLogin}>
+        
+      {/* IT-S OAuth Buttons — Future Feature */}
+      <div style={{display:'flex',flexDirection:'column',gap:'10px',marginBottom:'20px'}}>
+        <button onClick={()=>{window.location.href=`https://its-id.vercel.app/oauth/authorize?redirect_uri=${encodeURIComponent(window.location.origin+'/auth/callback')}&scope=openid+profile+email`}} style={{padding:'11px',borderRadius:'8px',border:'2px solid #f0a500',background:'transparent',color:'white',fontWeight:'600',cursor:'pointer',width:'100%',fontSize:'14px'}}>🪪 Sign in with IT-S ID</button>
+        <button onClick={()=>{window.location.href=`https://its-id.vercel.app/oauth/authorize?provider=google&redirect_uri=${encodeURIComponent(window.location.origin+'/auth/callback')}`}} style={{padding:'11px',borderRadius:'8px',border:'1px solid #444',background:'transparent',color:'white',cursor:'pointer',width:'100%',fontSize:'14px'}}>G  Sign in with Google</button>
+        <button onClick={()=>{window.location.href=`https://its-id.vercel.app/oauth/authorize?provider=github&redirect_uri=${encodeURIComponent(window.location.origin+'/auth/callback')}`}} style={{padding:'11px',borderRadius:'8px',border:'1px solid #444',background:'transparent',color:'white',cursor:'pointer',width:'100%',fontSize:'14px'}}>⌥ Sign in with GitHub</button>
+      </div>
+      {/* or continue with email */}
+      <form onSubmit={handleLogin}>
           {[
             { key: 'email', label: 'Email', type: 'email', placeholder: 'your@email.com' },
             { key: 'password', label: 'Password', type: 'password', placeholder: 'Your password' },
