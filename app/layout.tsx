@@ -29,7 +29,8 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           <div style={{ marginBottom: 8, fontWeight: 600, color: 'rgba(255,255,255,0.6)' }}>IT-S Bank</div>
           <div>IT-S Universe © 2026 · Powered by IT-S Coin (ITS) · Your Bank. Your Rules.</div>
         </footer>
-      </body>
+      <script>if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('/sw.js').catch(()=>{}))}</script>
+</body>
     </html>
   )
 }
