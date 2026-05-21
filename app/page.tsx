@@ -1,3 +1,4 @@
+// IT-S Universe — Open Access
 export default function Home() {
   return (
     <div style={{ maxWidth: 1200, margin: '0 auto', padding: '60px 24px' }}>
